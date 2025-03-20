@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 
-def blog_view(request):
+def myapp_view(request):
     html = """
         <h1>Main page</h1>
         <p>Bu asosiy bo'lim</p>
