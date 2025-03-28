@@ -7,7 +7,7 @@ class Countries(models.Model):
     region = models.ForeignKey('Regions', models.DO_NOTHING)
 
     class Meta:
-        managed = False
+        
         db_table = 'countries'
 
 
@@ -17,7 +17,7 @@ class Departments(models.Model):
     location = models.ForeignKey('Locations', models.DO_NOTHING)
 
     class Meta:
-        managed = False
+        
         db_table = 'departments'         
 
 
@@ -29,7 +29,7 @@ class Dependents(models.Model):
     employee = models.ForeignKey('Employees', models.DO_NOTHING)
 
     class Meta:
-        managed = False
+        
         db_table = 'dependents'
         
         
@@ -47,7 +47,7 @@ class Employees(models.Model):
     department = models.ForeignKey('Departments', models.DO_NOTHING)
 
     class Meta:
-        managed = False
+        
         db_table = 'employees'
         
 
@@ -58,7 +58,7 @@ class Jobs(models.Model):
     max_salary = models.TextField()
 
     class Meta:
-        managed = False
+        
         db_table = 'jobs'
         
 
@@ -72,7 +72,7 @@ class Locations(models.Model):
 
 
     class Meta:
-        managed = False
+        
         db_table = 'locations'
         
 
@@ -81,5 +81,5 @@ class Regions(models.Model):
     region_name = models.TextField()
 
     class Meta:
-        managed = False
+        
         db_table = 'regions'
