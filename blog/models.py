@@ -7,7 +7,7 @@ from django.utils.text import slugify
 class Author(models.Model):
     name = models.CharField(max_length=100, blank=True, null=True)
     age = models.SmallIntegerField()
-    url = models.URLField(null=True)
+    url = models.URLField(null=True, blank=True)
 
     def __str__(self):
         return self.name
