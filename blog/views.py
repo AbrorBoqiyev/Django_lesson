@@ -16,8 +16,10 @@ def blog_list(request):
     # posts = Post.objects.all().order_by('-publish')  #DESC
     posts = Post.objects.all()
     # posts = Post.objects.all().order_by('-publish')
-    print(posts.query)
+    # print(posts.query)
     article = Post.objects.select_related('author').get(id=2)
+    readdress = Author.objects.get(id=4)
+    print(readdress)
     print(article.author.name)
     
     # --------------------
@@ -37,7 +39,7 @@ def blog_list(request):
     post_list = ""
     for post in posts:
         post_list += f"<li><strong>{post}</strong> | <I>{post.publish}</I>   </br> {post.content}</li>"
-    return HttpResponse(f"<ol>{post_list}</ol> <br> {article.author.name}")
+    return HttpResponse(f"<ol>{post_list}</ol> <br> {article.author.name}  <br>  {readdress} ")
 
 
 

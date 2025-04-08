@@ -4,8 +4,15 @@ from .models import Countries
 
 # Create your views here.
 def orm_list(request):
-    countries = Countries.objects.all()
-    country_list = ""
-    for c in countries:
-        country_list += f"<li>{c}</li>"   
-    return HttpResponse(f"<ul>{country_list}</ul>")
+    html = """ 
+        <h1>working...</h1>
+    """ 
+    return HttpResponse(html)
+
+
+def checker(request):
+    context = {
+        "title": 'Hello world',
+        "text": 'This is my project',
+    }
+    return render(request, "index.html", context)

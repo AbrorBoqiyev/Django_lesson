@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    transition: 0.4s;
+}
+
+.main{
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 4rem;
+    padding: 10px;
+    border-radius: 10px;
+    width: 50%;
+    height: 10rem;
+    background-color: whitesmoke;
+
+}
+
+
+h1{
+    color: blue;
+    /* background-color: aqua; */
+}
+
